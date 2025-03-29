@@ -402,4 +402,21 @@ export const components: Registry = [
         )
     ),
   },
+  {
+    name: "checkout-page",
+    type: "registry:component",
+    dependencies: ["lucide-react"],
+    files: [
+      {
+        path: "@/components/commerce-ui/checkout-page/checkout-page.tsx",
+        type: "registry:component",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import(
+          "../components/commerce-ui/checkout-page/checkout-page.tsx"
+        )
+    ),
+  },
 ];

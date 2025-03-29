@@ -30,4 +30,8 @@ export const sidebarBadges = [
     page: "Variant Selector",
     isNew: true,
   },
+  {
+    page: "Checkout Page",
+    isNew: true,
+  },
 ];
