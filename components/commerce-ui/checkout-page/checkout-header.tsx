@@ -10,31 +10,37 @@ function CheckoutHeader({ step = "cart" }: CheckoutHeaderProps) {
 
   return (
     <div className="container mx-auto py-4">
-      <div className="flex w-full max-w-md mx-auto pb-8 items-center justify-between">
+      <div className="mx-auto flex w-full max-w-md items-center justify-between pb-8">
         <p
-          className={`font-semibold text-green uppercase ${currentStep === "cart" ? "text-primary" : ""}`}
+          className={`text-green font-semibold uppercase ${currentStep === "cart" ? "text-primary" : ""}`}
           onClick={() => setStep("cart")}
         >
           Cart
         </p>
-        <div className="flex items-center justify-center space-x-1 mx-2">
+        <div className="mx-2 flex items-center justify-center space-x-1">
           {[1, 2, 2, 3, 2, 2, 1].map((size, index) => (
-            <div key={index} className={`w-${size} h-${size} bg-[#8EDDCB] rounded-full`} />
+            <div
+              key={index}
+              className={`w-${size} h-${size} rounded-full bg-[#8EDDCB]`}
+            />
           ))}
         </div>
         <p
-          className={`font-semibold text-green uppercase ${currentStep === "address" ? "text-primary" : ""}`}
+          className={`text-green font-semibold uppercase ${currentStep === "address" ? "text-primary" : ""}`}
           onClick={() => setStep("address")}
         >
           Address
         </p>
-        <div className="flex items-center justify-center space-x-1 mx-2">
+        <div className="mx-2 flex items-center justify-center space-x-1">
           {[1, 2, 2, 3, 2, 2, 1].map((size, index) => (
-            <div key={index} className={`w-${size} h-${size} bg-[#8EDDCB] rounded-full`} />
+            <div
+              key={index}
+              className={`w-${size} h-${size} rounded-full bg-[#8EDDCB]`}
+            />
           ))}
         </div>
         <p
-          className={`font-semibold text-green uppercase ${currentStep === "payment" ? "text-primary" : ""}`}
+          className={`text-green font-semibold uppercase ${currentStep === "payment" ? "text-primary" : ""}`}
           onClick={() => setStep("payment")}
         >
           Payment
@@ -45,4 +51,3 @@ function CheckoutHeader({ step = "cart" }: CheckoutHeaderProps) {
 }
 
 export default CheckoutHeader;
-
